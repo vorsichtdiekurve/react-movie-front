@@ -1,6 +1,7 @@
 .App {
   background-color: #282c34;
   text-align: center;
+  color: white;
 }
 
 .App-logo {
@@ -12,6 +13,12 @@
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
+}
+
+.App-input {
+  background-color: white;
+  text-align: center;
+  color: white;
 }
 
 .App-header {
