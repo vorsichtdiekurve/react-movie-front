@@ -5,11 +5,9 @@ import { useState } from 'react';
 function App() {
   const initialMovie = "Memento"
   const [title, setTitle] = useState(initialMovie)
-  const [titleLengthText, setTitleLengthText] = useState(getTitleLengthText(initialMovie.length))
 
   function handleChange(event) {
     setTitle(event.target.value)
-    setTitleLengthText(getTitleLengthText(event.target.value.length))
   }
 
   function getTitleLengthText(length) {
@@ -23,6 +21,8 @@ function App() {
       return `That's too long: ${length} characters.`
     }
   }
+  
+  let titleLengthText = getTitleLengthText(title.length)
 
   return (
     <div className='App-header'>
