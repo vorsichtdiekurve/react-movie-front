@@ -21,7 +21,7 @@ function App() {
       return `That's too long: ${length} characters.`
     }
   }
-  
+
   let titleLengthText = getTitleLengthText(title.length)
 
   return (
@@ -29,7 +29,8 @@ function App() {
       <h1>My favorite movies to watch</h1>
       <h2>My favorite movie for today is {title}.</h2>
       <h3>{titleLengthText}</h3>
-      <input type="text" value={title} onChange={handleChange} />
+      <input type="text" value={title} onChange={handleChange}/>
+      {title.length > 0 && <button onClick={() => alert(title)}>Show title</button>}
       <img src={logo} className="App-logo" alt="logo" />
     </div>
   );
